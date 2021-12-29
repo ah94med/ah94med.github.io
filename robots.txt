@@ -1,0 +1,5 @@
+# Hi my name is almigdad yahya and this is my portfolio, tell me what you think ? im also available for hire feel free to contact me
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
