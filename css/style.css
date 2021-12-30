@@ -83,10 +83,10 @@ button, p, span, a {
 .cursor__ball--light {
     background-color: #7353BA;
     border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     filter: blur(70px);
-    opacity: 50%;
+    opacity: 80%;
     z-index: 0;
     /* remove this  */
     /* display: none; */
