@@ -628,6 +628,7 @@ border: none !important;
 
   .project-detail h1 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .process-section .process-section-conatiner .col .process-item {
