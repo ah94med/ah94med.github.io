@@ -721,5 +721,6 @@ border: none !important;
   }
   .project-detail img, .project-detail video{
     display: block;
+    width: 20%;
   }
 }
