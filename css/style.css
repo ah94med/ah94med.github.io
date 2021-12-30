@@ -197,9 +197,9 @@ font-family: 'Playfair Display';
     font-size: 6rem;
     transform: rotate(-90deg);
     font-weight: bolder;
-    color: #2F195F;
+    color: #EFC3F5;
     pointer-events: none;
-    opacity: .8;
+    opacity: .2;
 }
 
 /* about section  */
