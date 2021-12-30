@@ -614,6 +614,7 @@ border: none !important;
 
   .projects-section .projects-section-container .col-2 h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
   .project-detail img, .project-detail video {
