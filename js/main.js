@@ -164,11 +164,7 @@ function render(){
   dx = Math.floor(dx * 100) / 100;
   dy = Math.floor(dy * 100) / 100;
   
-  
   main.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
- 
-  
-  
   window.requestAnimationFrame(render);
 }
 

@@ -125,7 +125,7 @@ button, p, span, a {
 
 .project-detail {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: fixed;
     background-color: #0F1020;
     z-index: 10;
@@ -171,7 +171,7 @@ font-family: 'Playfair Display';
 /* hero section  */
 .section {
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,7 +194,7 @@ font-family: 'Playfair Display';
 
 .BG-text {
     text-transform: uppercase;
-    font-size: 8rem;
+    font-size: 6rem;
     transform: rotate(-90deg);
     font-weight: bolder;
     color: #2F195F;
@@ -227,7 +227,7 @@ font-family: 'Playfair Display';
     /* align-self: flex-end; */
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -260,6 +260,10 @@ font-family: 'Playfair Display';
     width: 30%;
 }
 
+.projects-section .projects-section-container .col-1 .helper-text {
+  display: none;
+}
+
 .projects-section .projects-section-container .col-2 .projects-list {
     display: flex;
     flex-direction: column;
@@ -278,7 +282,7 @@ font-family: 'Playfair Display';
 .projects-section .projects-section-container .project-samples {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -1;
 }
 
@@ -341,7 +345,7 @@ opacity: 0.8;
 
 .process-section .process-section-conatiner .col-1 {
   width: 30%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .process-section .process-section-conatiner .col-2 {
   flex-wrap: wrap;
@@ -372,6 +376,7 @@ opacity: 0.8;
   align-items: center;
   width: 100vw;
   flex-grow: 1;
+  min-height: 100vh;
 }
 
 .workflow-section .workflow-section-conatiner .col-1 {
@@ -382,7 +387,7 @@ opacity: 0.8;
 }
 
 .workflow-section .workflow-section-conatiner .col-1 .BG-text {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .workflow-section .workflow-section-conatiner .col-2 {
@@ -409,8 +414,9 @@ opacity: 0.8;
 .footer-section .footer-section-conatiner {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: space-around;
+    text-align: center;
 }
 
 .footer-section .footer-section-conatiner .col-1 .BG-text {
@@ -428,6 +434,7 @@ opacity: 0.8;
 
 .footer-section .footer-section-conatiner .col-2 .footer-item {
   text-align: center;
+  
 }
 .footer-section .footer-section-conatiner .col-2 .footer-item .pre-cta {
   font-size: 1.5rem;
@@ -452,8 +459,10 @@ opacity: 0.8;
   font-size: 1.2rem;
 }
 
+
 .footer-section .footer-section-conatiner .col-2 .footer-item .closing {
   font-size: 1rem;
+  text-align: center;
   }
 
   .ext-arrow svg {
@@ -575,3 +584,141 @@ border: none !important;
 }
 
 /* contact form  */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hidden-q {
+    display: none;
+  }
+  .cursor .cursor__ball--light {
+    display: none;
+  }
+  .about-section .about-section-conatiner .col p {
+    width: auto;
+  }
+
+  .BG-text {
+    font-size: 4rem;
+  }
+
+  .workflow-section .workflow-section-conatiner .col-1 .BG-text {
+    font-size: 4rem;
+  }
+
+  .projects-section .projects-section-container .col-2 .projects-list .project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-section .projects-section-container .col-2 h2 {
+    font-size: 2rem;
+  }
+
+  .project-detail img, .project-detail video {
+    display: none;
+  }
+
+  .project-detail p {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  .project-detail h1 {
+    font-size: 2rem;
+  }
+
+  .process-section .process-section-conatiner .col .process-item {
+    padding: 0rem 2rem;
+    width: auto;
+  }
+  .process-section .process-section-conatiner .col-2 h2 {
+    color: #EFC3F5;
+    font-size: 2.5rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .project-detail p {
+    width: 80%;
+    font-size: 1.1em;
+  }
+  .project-detail img, .project-detail video {
+    display: none;
+  }
+}
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .cursor .cursor__ball--big {
+    display: none;
+  }
+  
+  .cursor .cursor__ball--small {
+    display: none;
+  }
+
+  
+
+  .about-section .about-section-conatiner {
+    flex-direction: column;
+  }
+
+  .projects-section .projects-section-container {
+    flex-direction: column;
+  }
+
+  .projects-section .projects-section-container .col-1 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .projects-section .projects-section-container .col-1 .helper-text {
+    display: block;
+  }
+
+  .process-section .process-section-conatiner {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .process-section .process-section-conatiner .col-1 {
+    min-height: auto;
+    width: auto;
+  }
+
+  .process-section .process-section-conatiner .col h2 {
+    text-align: center;
+  }
+
+  .workflow-section .workflow-section-conatiner {
+    flex-direction: column;
+  }
+
+  .footer-section .footer-section-conatiner {
+    align-items: center;
+  }
+  
+  .BG-text {
+    transform: none;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .project-detail p {
+    width: 50%;
+    font-size: 1.1em;
+  }
+  .project-detail img, .project-detail video{
+    display: block;
+  }
+}
