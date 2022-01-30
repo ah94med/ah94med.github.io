@@ -443,8 +443,8 @@ opacity: 0.8;
 
 .footer-section .footer-section-conatiner .col-2 .footer-item .contact-cta {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+    justify-content: space-between;
   align-items: center;
 }
 
@@ -453,6 +453,13 @@ opacity: 0.8;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   text-decoration: none;
+}
+
+.footer-section .footer-section-conatiner .col-2 .footer-item .contact-cta span {
+  position: relative;
+}
+.footer-section .footer-section-conatiner .col-2 .footer-item .contact-cta span svg {
+  height: 2em;
 }
 
 .footer-section .footer-section-conatiner .col-2 .footer-item .resume-cta {
