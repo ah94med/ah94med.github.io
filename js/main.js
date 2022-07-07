@@ -181,8 +181,10 @@ const $lightBall = document.querySelector('.cursor__ball--light');
 const $smallBall = document.querySelector('.cursor__ball--small');
 const $clickIndi = document.querySelector('.cursor__clickIdic');
 const $viewIndi = document.querySelector('.cursor__viewIndi');
+const $caseIndi = document.querySelector('.cursor__caseIndi');
 const $hoverables = document.querySelectorAll('.hoverable');
 const $hoverables_view = document.querySelectorAll('.hoverable-view');
+const $hoverables_case = document.querySelectorAll('.hoverable-case');
 
 
 // Listeners
@@ -195,6 +197,11 @@ for (let i = 0; i < $hoverables.length; i++) {
 for (let i = 0; i < $hoverables_view.length; i++) {
   $hoverables_view[i].addEventListener('mouseenter', onMouseHoverView);
   $hoverables_view[i].addEventListener('mouseleave', onMouseHoverOutView);
+}
+
+for (let i = 0; i < $hoverables_case.length; i++) {
+  $hoverables_case[i].addEventListener('mouseenter', onMouseHoverCase);
+  $hoverables_case[i].addEventListener('mouseleave', onMouseHoverOutCase);
 }
 
 // Move the cursor
@@ -241,7 +248,7 @@ $("body").mouseleave(function() {
 function onMouseHover() {
   TweenMax.to($bigBall, 0.3, {
     scale: 2,
-    backgroundColor:"#2F195F",
+    backgroundColor:"#202020",
     border:"none"
   });
 
@@ -261,7 +268,7 @@ function onMouseHoverOut() {
   TweenMax.to($bigBall, 0.3, {
     scale: 1,
     background:"none",
-    border:"3px solid #FAA6FF"
+    border:"3px solid #202020"
   });
 
     TweenMax.to($smallBall, 0.3, {
@@ -285,7 +292,7 @@ function onMouseHoverOut() {
 function onMouseHoverView() {
   TweenMax.to($bigBall, 0.3, {
     scale: 2,
-    backgroundColor:"#2F195F",
+    backgroundColor:"#202020",
     border:"none"
   });
 
@@ -305,7 +312,7 @@ function onMouseHoverOutView() {
   TweenMax.to($bigBall, 0.3, {
     scale: 1,
     background:"none",
-    border:"3px solid #FAA6FF"
+    border:"3px solid #202020"
   });
 
     TweenMax.to($smallBall, 0.3, {
@@ -313,8 +320,10 @@ function onMouseHoverOutView() {
       scale: 1, 
     });
 
-    TweenMax.to($viewIndi, 0.3, {
-      autoAlpha:0 });
+  TweenMax.to($viewIndi, 0.3, {
+    autoAlpha:0 
+  });
+
 
    
 }
@@ -322,6 +331,48 @@ function onMouseHoverOutView() {
 
 // ---------- view indicator
 
+
+
+//--------- Case indicator
+function onMouseHoverCase() {
+  TweenMax.to($bigBall, 0.3, {
+    scale: 2,
+    backgroundColor:"#202020",
+    border:"none"
+  });
+
+  TweenMax.to($caseIndi, 0.3, {
+    autoAlpha:1,
+    scale:0.150
+  });
+
+  TweenMax.to($smallBall, 0.3, {
+    autoAlpha:1,
+    scale: 7, 
+  
+  });   
+}
+
+function onMouseHoverOutCase() {
+  TweenMax.to($bigBall, 0.3, {
+    scale: 1,
+    background:"none",
+    border:"3px solid #202020"
+  });
+
+    TweenMax.to($smallBall, 0.3, {
+      autoAlpha:1,
+      scale: 1, 
+    });
+
+    TweenMax.to($caseIndi, 0.3, {
+  autoAlpha:0 });
+
+   
+}
+
+
+// ---------- Case indicator
 // ------------------Hover an element
 
 // ----------------------------- custom cursor 
@@ -350,4 +401,48 @@ function onMouseHoverOutView() {
     $(".p-3").mouseout(function() {
       $(".thumb-gro img").removeClass("visible-thumb");
     });
+
+    $(".p-4").mouseover(function() {
+      $(".thumb-haircare img").addClass("visible-thumb");
+    });
+    $(".p-4").mouseout(function() {
+      $(".thumb-haircare img").removeClass("visible-thumb");
+    });
 // ------------------/ custom project link interaction 
+
+
+//---------------- project gallery
+
+$(function() {
+  var bounds = {
+    left: $(".item_block_left_gallery").position().left
+  };
+  bounds.right = bounds.left - $(".item_block_left_gallery").width() - $(".item_block_left").width() + 10;
+
+  $(".item_block_left_gallery").draggable({
+    scroll: false,
+    axis: "x",
+    drag: function(e, ui) {
+      var l = ui.position.left;
+      if (l > bounds.left) {
+        console.log("Hit Left Boundry");
+        ui.position.left = bounds.left;
+      }
+      if (l <= bounds.right) {
+        console.log("Hit Right Boundry");
+        ui.position.left = bounds.right;
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+//------------------------------/ project gallery
