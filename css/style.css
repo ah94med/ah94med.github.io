@@ -7,9 +7,9 @@ Blur cursor #7353BA
 */
 /* ------color codes */
 html, body {
-    background: #fefefe;
+    background: #fcfcfc;
     color: #202020;
-    background-image: url("../img/bg-image.png");
+/*     background-image: url("../img/bg-image.png"); */
 }
 body {
     overflow-x: hidden;
