@@ -203,8 +203,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 14.6em;
-  padding-right: 14.6em;
+  padding-left: 12em;
+  padding-right: 12em;
   display: flex;
 }
 
@@ -1089,6 +1089,132 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-wrapper {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .hero-section {
+    flex-wrap: wrap;
+  }
+
+  .projects-wrapper {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .projeccts-row {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    flex-direction: column;
+  }
+
+  .project-item {
+    width: 100%;
+    grid-column-gap: 0em;
+    grid-row-gap: 0em;
+  }
+
+  .workflow-wrapper {
+    grid-column-gap: 5em;
+    grid-row-gap: 5em;
+  }
+
+  .footer-link {
+    font-size: 1.5em;
+  }
+
+  .frame-11 {
+    flex-wrap: wrap;
+  }
+
+  .section-wrapper, .section-wrapper.top-padding-6 {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .workflow-wrapper {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer-link-wrapper {
+    width: 100%;
+    flex: 0 auto;
+  }
+
+  .overview-role {
+    flex-wrap: wrap;
+  }
+
+  .overview {
+    flex: 0 auto;
+  }
+
+  .section-wrapper, .section-wrapper.top-padding-6 {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .hero-section {
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+  }
+
+  .projects-wrapper, .workflow-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .footer-link-wrapper {
+    width: 100%;
+    flex: 0 auto;
+  }
+
+  .footer-link {
+    font-size: 2rem;
+  }
+
+  .link_style {
+    font-size: 1rem;
+  }
+
+  .description {
+    flex: 0 auto;
+  }
+
+  .section-wrapper {
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+
+  .project-section-intro {
+    flex-wrap: wrap;
+  }
+
+  .project-section-heading {
+    flex: 0 auto;
+  }
 }
 
 
